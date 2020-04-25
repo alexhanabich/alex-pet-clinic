@@ -1,8 +1,12 @@
 package alex.kang.alexpetclinic.model;
 
+import javax.persistence.Id;
 import java.time.LocalDate;
 
 public class Pet {
+
+    @Id
+    private long id;
     private PetType petType;
     private Owner owner;
     private LocalDate birthDate;
@@ -29,5 +33,13 @@ public class Pet {
 
     public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 }

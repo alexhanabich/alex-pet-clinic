@@ -1,7 +1,12 @@
 package alex.kang.alexpetclinic.model;
 
 
+import javax.persistence.Id;
+
 public class Person {
+
+    @Id
+    private long id;
     private String firstName;
     private String lastName;
 
@@ -19,5 +24,13 @@ public class Person {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 }
